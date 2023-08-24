@@ -1,0 +1,28 @@
+﻿@model List<CoreProject_Departman.Models.Personel>
+
+@{
+    ViewData["Title"] = "BirimDetay";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h1 style="color:antiquewhite">BİRİM DETAY SAYFASI</h1>
+<h2>Birim:  @ViewBag.ba</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Personel ID</th>
+        <th>Personel Adı Soyadı</th>
+        <th>Personel Şehir</th>
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.PersonelID</td>
+            <td>@x.PersonelAd @x.PersonelSoyad</td>
+            <td>@x.PersonelSehir</td>
+
+        </tr>
+    }
+</table>
+

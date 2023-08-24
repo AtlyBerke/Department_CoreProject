@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:12%">
+        <h3 class="w3-bar-item">Menu</h3>
+        <a href="/Birimler/Index/" class="w3-bar-item w3-button">Birimler</a>
+        <a href="/Personeller/Index/" class="w3-bar-item w3-button">Personeller</a>
+        <a href="#" class="w3-bar-item w3-button">Hakkımızda</a>
+        <a href="#" class="w3-bar-item w3-button">Çıkış</a>
+    </div>
+
+    <!-- Page Content -->
+    <div style="margin-left:12%">
+
+        <div class="w3-container w3-teal">
+            <h1>ASP.NET CORE MVC FIRST PROJECT</h1>
+        </div>
+
+
+
+        <div class="w3-container">
+            @RenderBody()
+        </div>
+
+    </div>
+
+</body>
+</html>

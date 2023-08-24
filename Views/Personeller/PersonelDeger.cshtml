@@ -1,0 +1,27 @@
+﻿@model CoreProject_Departman.Models.Personel
+
+@{
+    ViewData["Title"] = "PersonelDeger";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<br />
+<h1 style="color:orangered">Birim Güncelleme Sayfası</h1>
+<br />
+@using (Html.BeginForm("BirimGuncelle", "Birimler", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.PersonelID)
+    @Html.Label("Personel Adı")
+    @Html.TextBoxFor(x => x.PersonelAd, new { @class = "form-control" })
+    <br />
+    @Html.Label("Personel Soyadı")
+    @Html.TextBoxFor(x => x.PersonelSoyad, new { @class = "form-control" })
+    <br />
+    @Html.Label("Personel Şehir")
+    @Html.TextBoxFor(x => x.PersonelSehir, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">Departman Güncelle</button>
+}
+
+

@@ -1,0 +1,26 @@
+﻿@model CoreProject_Departman.Models.Personel
+
+@{
+    ViewData["Title"] = "YeniPersonel";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h1>Yeni Personel</h1>
+<br />
+@using (Html.BeginForm("YeniPersonel", "Personeller", FormMethod.Post))
+{
+    @Html.Label("Personel Adı")
+    @Html.TextBoxFor(x => x.PersonelAd, new { @class = "form-control" })
+    <br />
+    @Html.Label("Personel Soyadı")
+    @Html.TextBoxFor(x => x.PersonelSoyad, new { @class = "form-control" })
+    <br />
+    @Html.Label("Personel Şehir")
+    @Html.TextBoxFor(x => x.PersonelSehir, new { @class = "form-control" })
+    <br />
+    @Html.Label("Birimler")
+    @Html.DropDownListFor(x=>x.Birim.BirimID,(List<SelectListItem>)ViewBag.birim,new { @class = "form-control" })
+    <br />
+    <input type="submit" class="btn btn-light" value="KAYDET" />
+
+}
