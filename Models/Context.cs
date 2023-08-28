@@ -10,7 +10,7 @@ namespace CoreProject_Departman.Models
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=DESKTOP-LC55U5G\\SQLEXPRESS; database=DBCoreProject1; integrated security=true;");
+            optionsBuilder.UseSqlServer("server=DESKTOP; database=DBCoreProject1; integrated security=true;");
         }
 
         public DbSet<Personel> Personels { get; set; }
